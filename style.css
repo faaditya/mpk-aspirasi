@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f766e;
+  color: white;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  margin: 5px 10px;
+  text-decoration: none;
+}
+
+nav a.active {
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* BUTTON */
+.btn {
+  background: #14b8a6;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* TEAM */
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.member {
+  background: #e6fffa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.member img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* FOOTER */
+footer {
+  background: #0f766e;
+  color: white;
+  padding: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 70px;
+  margin: 5px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .team {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HERO IMAGE SEKOLAH */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('images/dellas.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+/* FAQ ACCORDION */
+.faq {
+  max-width: 700px;
+  margin: auto;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #14b8a6;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #e6fffa;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.footer-school {
+  max-width: 250px;
+}
+
+.footer-school p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social-icons a {
+  font-size: 28px;
+  margin: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #2dd4bf;
+  transform: scale(1.2);
+}
+
+.social-icons a {
+  text-decoration: none; /* ini penting */
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 70px;
+  height: auto;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .footer-logo img {
+    width: 55px;
+  }
+}
